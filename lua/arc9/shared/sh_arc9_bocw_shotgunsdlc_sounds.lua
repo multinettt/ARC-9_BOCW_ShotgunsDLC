@@ -7,40 +7,33 @@
 -- SHELLS
 
 sound.Add({
-    name = "ARC9_BOCW.Streetsweeper_shellinstart",
-    channel = CHAN_AUTO,
-    volume = 1.0,
-    sound = { "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellinstart1.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellinstart2.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellinstart3.wav" }
-})
-
-sound.Add({
     name = "ARC9_BOCW.Streetsweeper_shellin",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = { "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin1.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin2.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin3.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin4.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin5.wav" }
+    sound = { "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin1.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin2.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin3.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_shellin4.wav" }
 })
 
 -- READY
 
 sound.Add({
-    name = "ARC9_BOCW.Streetsweeper_ready_start",
+    name = "ARC9_BOCW.Streetsweeper_ready_part1",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_ready_start.wav"
+    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_ready_part1.wav"
 })
 
 sound.Add({
-    name = "ARC9_BOCW.Streetsweeper_ready_boltback",
+    name = "ARC9_BOCW.Streetsweeper_ready_part2",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_ready_boltback.wav"
+    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_ready_part2.wav"
 })
 
 sound.Add({
-    name = "ARC9_BOCW.Streetsweeper_ready_boltrelease",
+    name = "ARC9_BOCW.Streetsweeper_ready_part3",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_ready_boltrelease.wav"
+    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_ready_part3.wav"
 })
 
 -- RELOAD FOLEY
@@ -49,14 +42,21 @@ sound.Add({
     name = "ARC9_BOCW.Streetsweeper_reload_start",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = { "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_start1.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_start2.wav" }
+    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_start.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Streetsweeper_rotate",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = { "weapons/arc9/bocw_streetsweeper/streetsweeper_rotate1.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_rotate2.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_rotate3.wav" }
 })
 
 sound.Add({
     name = "ARC9_BOCW.Streetsweeper_reload_end",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = { "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_end1.wav", "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_end2.wav" }
+    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_reload_end.wav"
 })
 
 -- INSPECT FOLEY
@@ -69,10 +69,10 @@ sound.Add({
 })
 
 sound.Add({
-    name = "ARC9_BOCW.Streetsweeper_inspect_raygun",
+    name = "ARC9_BOCW.Streetsweeper_inspect_wraith",
     channel = CHAN_ITEM,
     volume = 1.0,
-    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_inspect_raygun.wav"
+    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_inspect_wraith.wav"
 })
 
 -- PULLOUT PUTAWAY
@@ -100,14 +100,6 @@ sound.Add({ -- BLACK OPS COLD WAR
     volume = 1.0,
     level = 100,
     sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_fire.wav"
-})
-
-sound.Add({ -- WARZONE
-    name = "ARC9_BOCW.Streetsweeper_fire_wz",
-    channel = CHAN_STATIC,
-    volume = 0.7,
-    level = 100,
-    sound = "weapons/arc9/bocw_streetsweeper/streetsweeper_fire_wz.wav"
 })
 
 sound.Add({

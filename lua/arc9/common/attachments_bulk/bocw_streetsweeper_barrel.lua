@@ -19,7 +19,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.RangeMaxMult = 1.12
+ATT.RangeMaxMult = 1.13
 
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
@@ -80,8 +80,8 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.RangeMaxMult = 1.12
-ATT.RPMMult = 1.15
+ATT.RangeMaxMult = 1.13
+ATT.RPMMult = 1.09
 
 ATT.SpeedMultSprint = 0.96
 ATT.SpeedMultSights = 0.85
@@ -146,7 +146,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.RPMMult = 1.15
+ATT.RPMMult = 1.09
 
 ATT.SpeedMultSprint = 0.95
 
@@ -178,7 +178,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.DamageMaxMult = 1.52
+ATT.DamageMaxMult = 1.27
 
 ATT.RangeMaxMult = 0.87
 

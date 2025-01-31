@@ -137,8 +137,8 @@ SWEP.TracerSize = 1
 SWEP.Ammo = "buckshot" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 6 -- Self-explanatory.
-SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
+SWEP.ClipSize = 12 -- Self-explanatory.
+SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ForceDefaultClip = nil -- Set to force a default amount of ammo this gun can have. Otherwise, this is controlled by console variables.
@@ -243,7 +243,7 @@ SWEP.FreeAimRadiusMultSights = 0.25
 SWEP.SwayMultSights = 0.5
 
 SWEP.AimDownSightsTime = 0.25 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being able to fire.
+SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
@@ -352,7 +352,7 @@ SWEP.BobSprintMult = 0.1
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    "tag_bullet_deplete_sqtl_00_animate",
+    "tag_ammo_01_animate",
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -425,7 +425,7 @@ SWEP.SightMidPoint = {
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(13, 44, 2.5)
+SWEP.CustomizePos = Vector(12, 42, 3.5)
 SWEP.CustomizeRotateAnchor = Vector(12, 0, -2)
 
 SWEP.CustomizeSnapshotFOV = 70
@@ -488,6 +488,7 @@ SWEP.AttachmentElements = {
     },
     ["bodymount_flashlight"] = {
         Bodygroups = {
+            {5, 1},
             {6, 1},
         }
     },
@@ -554,7 +555,7 @@ SWEP.Attachments = {
     {
         PrintName = "OPTIC", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(5, 0, 4.635),
+        Pos = Vector(4, 0, 4.74),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"optic_picatinny"},
@@ -573,15 +574,15 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(2, 0, 0),
+        Icon_Offset = Vector(6, 0, 0),
         Category = {"bocw_streetsweeper_barrel"},
         InstalledElements = {"barrelgone"},
     },
     {
         PrintName = "BODY",
         Bone = "tag_barrel",
-        Pos = Vector(3.5, 0, -2.44),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(11, -0.92, 0),
+        Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_xm4_body"},
         InstalledElements = {"bodymount_lasermixbody"},
@@ -589,7 +590,7 @@ SWEP.Attachments = {
     {
         Hidden = true,
         Bone = "tag_barrel",
-        Pos = Vector(3.5, 0, -2.75),
+        Pos = Vector(11, -1.9, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_xm4_body_flash"},
         InstalledElements = {"bodymount_flashlight"},
@@ -598,10 +599,10 @@ SWEP.Attachments = {
     {
         PrintName = "MAGAZINE",
         DefaultName = "30 Rnd",
-        Bone = "tag_magazine_cap",
+        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(5.3, 0, 0),
+        Icon_Offset = Vector(5.4, 0, 1),
         Category = {"bocw_streetsweeper_mag"},
         InstalledElements = {"maggone"},
     },
@@ -610,12 +611,12 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(-0.5, 0, 0),
         Category = {"bocw_streetsweeper_wrap"},
     },
     {
         PrintName = "STOCK",
-        Bone = "tag_stock",
+        Bone = "tag_stock_animate",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
@@ -700,11 +701,10 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "ready",
-        Mult = 1.3,
         EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_ready_start", t = 0 },
-            { s = "ARC9_BOCW.Streetsweeper_ready_boltback", t = 0.2 },
-            { s = "ARC9_BOCW.Streetsweeper_ready_boltrelease", t = 0.5 },
+            { s = "ARC9_BOCW.Streetsweeper_ready_part1", t = 0.3 },
+            { s = "ARC9_BOCW.Streetsweeper_ready_part2", t = 0.6 },
+            { s = "ARC9_BOCW.Streetsweeper_ready_part3", t = 0.9 },
         },
     },
     ["bash"] = {
@@ -719,68 +719,20 @@ SWEP.Animations = {
         RestoreAmmo = 1,
         EventTable = {
             { s = "ARC9_BOCW.Streetsweeper_reload_start", t = 0 },
-            { s = "ARC9_BOCW.Streetsweeper_shellinstart", t = 0.4 },
-            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0.5 },
+            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0.4 },
+            { s = "ARC9_BOCW.Streetsweeper_rotate", t = 0.8 },
         },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
         MinProgress = 0.7,
         EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_shellinstart", t = 0.1 },
-            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0.2 },
+            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0 },
+            { s = "ARC9_BOCW.Streetsweeper_rotate", t = 0.4 },
         },
     },
     ["reload_finish"] = {
         Source = "reload_out",
-        EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_reload_end", t = 0 },
-        },
-    },
-    ["reload_start_nostock"] = {
-        Source = "reload_in_nostock",
-        MinProgress = 0.8,
-        RestoreAmmo = 1,
-        EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_reload_start", t = 0 },
-            { s = "ARC9_BOCW.Streetsweeper_shellinstart", t = 0.4 },
-            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0.5 },
-        },
-    },
-    ["reload_insert_nostock"] = {
-        Source = "reload_loop_nostock",
-        MinProgress = 0.7,
-        EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_shellinstart", t = 0.1 },
-            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0.2 },
-        },
-    },
-    ["reload_finish_nostock"] = {
-        Source = "reload_out_nostock",
-        EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_reload_end", t = 0 },
-        },
-    },
-    ["reload_start_optic"] = {
-        Source = "reload_in_optic",
-        MinProgress = 0.8,
-        RestoreAmmo = 1,
-        EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_reload_start", t = 0 },
-            { s = "ARC9_BOCW.Streetsweeper_shellinstart", t = 0.4 },
-            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0.5 },
-        },
-    },
-    ["reload_insert_optic"] = {
-        Source = "reload_loop_optic",
-        MinProgress = 0.7,
-        EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_shellinstart", t = 0.1 },
-            { s = "ARC9_BOCW.Streetsweeper_shellin", t = 0.2 },
-        },
-    },
-    ["reload_finish_optic"] = {
-        Source = "reload_out_optic",
         EventTable = {
             { s = "ARC9_BOCW.Streetsweeper_reload_end", t = 0 },
         },
@@ -802,15 +754,14 @@ SWEP.Animations = {
     },
     ["enter_inspect"] = {
         Source = "inspect",
-        Time = 3.8,
         EventTable = {
             { s = "ARC9_BOCW.Streetsweeper_inspect", t = 0 },
         },
     },
     ["1_enter_inspect"] = {
-        Source = "inspect_raygun",
+        Source = "inspect_wraith",
         EventTable = {
-            { s = "ARC9_BOCW.Streetsweeper_inspect_raygun", t = 0 },
+            { s = "ARC9_BOCW.Streetsweeper_inspect_wraith", t = 0 },
         },
     },
 }
