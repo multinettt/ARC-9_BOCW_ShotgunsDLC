@@ -80,12 +80,12 @@ SWEP.ViewModelFOVBase = 70
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 159 -- Damage done at point blank range
+SWEP.DamageMax = 88 -- Damage done at point blank range
 SWEP.DamageMin = 0 -- Damage done at maximum range
 
 SWEP.DamageRand = 1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 6.35 * 39.37 -- How far bullets retain their maximum damage for.
+SWEP.RangeMin = 5.08 * 39.37 -- How far bullets retain their maximum damage for.
 SWEP.RangeMax = 20 * 39.37 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 SWEP.Distance = 20 * 39.37 -- In Hammer units, how far bullets can travel, period.
 
@@ -138,7 +138,7 @@ SWEP.Ammo = "buckshot" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 12 -- Self-explanatory.
-SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
+SWEP.SupplyLimit = 3 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ForceDefaultClip = nil -- Set to force a default amount of ammo this gun can have. Otherwise, this is controlled by console variables.
@@ -201,7 +201,7 @@ SWEP.UseDispersion = true -- Use this for shotguns - Additional random angle to 
 SWEP.DispersionSpread = 0 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
 SWEP.DispersionSpreadAddHipFire = 0.04
 
-SWEP.SpreadMultSights = 0.8
+SWEP.SpreadMultSights = 0.9
 SWEP.SpreadAddHipFire = 0.02
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = math.rad(20 / 37.5)
@@ -243,7 +243,7 @@ SWEP.FreeAimRadiusMultSights = 0.25
 SWEP.SwayMultSights = 0.5
 
 SWEP.AimDownSightsTime = 0.25 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
+SWEP.SprintToFireTime = 0.4 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
@@ -471,11 +471,6 @@ SWEP.AttachmentElements = {
             {2, 1},
         }
     },
-    ["barrelgone"] = {
-        Bodygroups = {
-            {3, 1},
-        }
-    },
     ["stockgone"] = {
         Bodygroups = {
             {4, 1},
@@ -495,42 +490,54 @@ SWEP.AttachmentElements = {
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.11, 0, 0),
+                Pos = Vector(3.5, 0, 0),
             },
         },
     },
     ["barrel_cavalry"] = {
+        Bodygroups = {
+            {3, 1},
+        },
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.7, 0, 0),
+                Pos = Vector(5.7, 0, 0),
             },
         },
     },
     ["barrel_reinforced"] = {
+        Bodygroups = {
+            {3, 1},
+        },
         AttPosMods = {
             [2] = {
-                Pos = Vector(0, 0, 0),
+                Pos = Vector(2.8, 0, 0),
             },
         },
     },
     ["barrel_ranger"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.61, 0, 0),
+                Pos = Vector(5.95, 0, 0),
             }
         },
     },
     ["barrel_hammerforged"] = {
+        Bodygroups = {
+            {3, 1},
+        },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-2.3, 0, 0),
+                Pos = Vector(2.8, 0, 0),
             }
         },
     },
     ["barrel_taskforce"] = {
+        Bodygroups = {
+            {3, 1},
+        },
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.76, 0, 0),
+                Pos = Vector(5.7, 0, 0),
             }
         },
     },
@@ -576,7 +583,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(6, 0, 0),
         Category = {"bocw_streetsweeper_barrel"},
-        InstalledElements = {"barrelgone"},
     },
     {
         PrintName = "BODY",
@@ -602,7 +608,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(5.4, 0, 1),
+        Icon_Offset = Vector(5.5, 0, 0.8),
         Category = {"bocw_streetsweeper_mag"},
         InstalledElements = {"maggone"},
     },
@@ -611,32 +617,20 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-0.5, 0, 0),
+        Icon_Offset = Vector(-0.75, 0, -1.25),
         Category = {"bocw_streetsweeper_wrap"},
     },
     {
         PrintName = "STOCK",
-        Bone = "tag_stock_animate",
+        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(-0.5, 0, 3.25),
         Category = {"bocw_streetsweeper_stock"},
-    },
-    {
-        PrintName = "SOUND",
-        Bone = "tag_barrel",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(20, 0, 0),
-        Category = {"bocw_streetsweeper_sound"},
-        CosmeticOnly = true,
     },
     {
         PrintName = "CAMO",
         DefaultIcon = Material("arc9/def_att_icons/skin.png"),
-        Bone = "tag_weapon",
-        Pos = Vector(5, 0, 1),
-        Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
         CosmeticOnly = true,
     },

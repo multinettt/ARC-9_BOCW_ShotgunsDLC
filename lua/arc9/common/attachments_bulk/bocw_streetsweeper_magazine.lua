@@ -16,7 +16,7 @@ ATT.Category = "bocw_streetsweeper_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_streetsweeper_magazine_ext1.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(4.6, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 15
@@ -43,7 +43,7 @@ ATT.Category = "bocw_streetsweeper_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_streetsweeper_magazine_extpro.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(4.6, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 15
