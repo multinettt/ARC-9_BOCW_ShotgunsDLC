@@ -155,3 +155,29 @@ ATT.SpeedMultSighted = 1.1
 ATT.SpreadMultHipFire = 1.2
 
 ARC9.LoadAttachment(ATT, "bocw_streetsweeper_stock_marathon")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "Iron Sights" --// 6
+ATT.CompactName = "IRON SIGHT"
+ATT.Icon = Material("entities/bocw_atts/stocks/streetsweeper_nostock.png", "mips smooth")
+ATT.Description = [[Original iron sights of the Striker-12.]]
+
+ATT.SortOrder = -100
+
+ATT.Category = "bocw_streetsweeper_optic"
+
+ATT.ActivateElements = {"railgone"}
+
+ATT.IronSights = {
+    Pos = Vector(0, -1, 1.3),
+    Ang = Angle(0, 0, 0),
+    Magnification = 1.4,
+    Blur = true,
+    --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
+    CrosshairInSights = false,
+}
+
+ARC9.LoadAttachment(ATT, "bocw_streetsweeper_norail")

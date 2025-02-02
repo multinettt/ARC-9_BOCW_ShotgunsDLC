@@ -487,6 +487,12 @@ SWEP.AttachmentElements = {
             {6, 1},
         }
     },
+    ["railgone"] = {
+        Bodygroups = {
+            {2, 1},
+            {7, 1}
+        }
+    },
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
@@ -565,8 +571,9 @@ SWEP.Attachments = {
         Pos = Vector(4, 0, 4.74),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"optic_picatinny"},
+        Category = {"bocw_streetsweeper_optic", "optic_picatinny"},
         InstalledElements = {"ironsightsgone"},
+        Installed = "bocw_streetsweeper_norail"
     },
     {
         PrintName = "MUZZLE",
@@ -653,8 +660,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["bocw_streetsweeper_stock"] and attached["optic_mount"] then
-        vm:SetBodygroup(5, 2) -- remove unfolded stock when stock attached with optic
+    if attached["railgone"] and attached["ironsightsgone"] then
+        vm:SetBodygroup(2, 1) -- remove unfolded stock when stock attached with optic
     end
 end
 
