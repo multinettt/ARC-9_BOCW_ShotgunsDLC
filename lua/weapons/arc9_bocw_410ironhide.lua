@@ -424,7 +424,7 @@ SWEP.SightMidPoint = {
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(9, 42, 2.5)
+SWEP.CustomizePos = Vector(9, 40, 2.5)
 SWEP.CustomizeRotateAnchor = Vector(10, 0, -2)
 
 SWEP.CustomizeSnapshotFOV = 70
@@ -479,6 +479,11 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {4, 1},
             {5, 1},
+        }
+    },
+    ["stockringgone"] = {
+        Bodygroups = {
+            {6, 1},
         }
     },
     ["bodymount_flashlight"] = {
@@ -610,10 +615,10 @@ SWEP.Attachments = {
     },
     {
         PrintName = "STOCK",
-        Bone = "tag_weapon",
+        Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, -1),
+        Icon_Offset = Vector(-1.5, 0, -1),
         Category = {"bocw_410ironhide_stock"},
     },
     {

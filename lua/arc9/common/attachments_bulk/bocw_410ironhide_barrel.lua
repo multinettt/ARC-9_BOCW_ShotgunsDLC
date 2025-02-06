@@ -77,7 +77,7 @@ ATT.Category = "bocw_410ironhide_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_410ironhide_barrel_reinforced.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(-0.016, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.RangeMaxMult = 1.12
@@ -175,7 +175,7 @@ ATT.Category = "bocw_410ironhide_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_410ironhide_barrel_taskforce.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(-0.016, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageMaxMult = 1.1

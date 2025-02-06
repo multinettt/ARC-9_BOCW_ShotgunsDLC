@@ -19,9 +19,9 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.SpeedMultSights = 1.1
+ATT.ActivateElements = {"stockringgone"}
 
-ATT.ActivateElements = {"stockgone", "stockringgone"}
+ATT.SpeedMultSights = 1.1
 
 ARC9.LoadAttachment(ATT, "bocw_410ironhide_stock_tactical")
 
@@ -71,7 +71,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMult = 1.05
 
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"stockgone", "stockringgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_410ironhide_stock_duster")
 
@@ -121,12 +121,12 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.ActivateElements = {"stockringgone"}
+
 ATT.SpeedMultShooting = 1.05
 ATT.SpeedMultSighted = 1.2
 
 ATT.SpreadMultHipFire = 1.15
-
-ATT.ActivateElements = {"stockgone", "stockringgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_410ironhide_stock_sascombat")
 
@@ -151,7 +151,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MultAimDownSightsTime = 0.9
 
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"stockgone", "stockringgone"}
 
 ATT.SpeedMultSprint = 1.04
 ATT.SpeedMultShooting = 1.1
@@ -161,29 +161,3 @@ ATT.SpeedMultSighted = 1.1
 ATT.SpreadMultHipFire = 1.2
 
 ARC9.LoadAttachment(ATT, "bocw_410ironhide_stock_marathon")
-
---
-
-ATT = {}
-
-ATT.PrintName = "Iron Sights" --// 6
-ATT.CompactName = "IRON SIGHT"
-ATT.Icon = Material("entities/bocw_atts/stocks/410ironhide_nostock.png", "mips smooth")
-ATT.Description = [[Original iron sights of the Striker-12.]]
-
-ATT.SortOrder = -100
-
-ATT.Category = "bocw_410ironhide_optic"
-
-ATT.ActivateElements = {"railgone"}
-
-ATT.IronSights = {
-    Pos = Vector(0, -1, 1.3),
-    Ang = Angle(0, 0, 0),
-    Magnification = 1.4,
-    Blur = true,
-    --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
-    CrosshairInSights = false,
-}
-
-ARC9.LoadAttachment(ATT, "bocw_410ironhide_norail")

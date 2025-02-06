@@ -21,7 +21,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 7
 
-ATT.ReloadTimeMult = 1.02 / 6
+ATT.ReloadTimeMult = 1.003
 
 ATT.ActivateElements = {"410ironhide_mag_ext"}
 
@@ -48,7 +48,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 8
 
-ATT.ReloadTimeMult = 1.14 / 6
+ATT.ReloadTimeMult = 1.023
 
 ATT.ActivateElements = {"410ironhide_mag_ext"}
 

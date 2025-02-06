@@ -34,7 +34,7 @@
         "Arc9EnvMapTint"
         {
             "min" "0"
-            "max" "0.1"
+            "max" "0.3"
             "envmap" "\specularity_00"
             "color" "[0.133 0.129 0.145]"
         }
