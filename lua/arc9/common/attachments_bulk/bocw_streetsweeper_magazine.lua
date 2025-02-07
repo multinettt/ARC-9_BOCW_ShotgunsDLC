@@ -50,6 +50,6 @@ ATT.ClipSizeOverride = 15
 
 ATT.ReloadTimeMult = 1.32
 
-ATT.ActivateElements = {"streetsweeper_mag_ext"}
+ATT.ActivateElements = {"streetsweeper_mag_extpro"}
 
 ARC9.LoadAttachment(ATT, "bocw_streetsweeper_magazine_extpro")

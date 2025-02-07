@@ -634,6 +634,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-0.5, 0, 3.25),
         Category = {"bocw_streetsweeper_stock"},
+        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "CAMO",
@@ -646,6 +647,23 @@ SWEP.Attachments = {
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_streetsweeper_sticker1.mdl",
         CosmeticOnly = true,
+        ExcludeElements = {"maggone"},
+    },
+    {
+        PrintName = "STICKER 1",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_streetsweeper_sticker1_ext1.mdl",
+        Bone = "tag_weapon",
+        CosmeticOnly = true,
+        RequireElements = {"streetsweeper_mag_ext"},
+    },
+    {
+        PrintName = "STICKER 1",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_streetsweeper_sticker1_extpro.mdl",
+        Bone = "tag_weapon",
+        CosmeticOnly = true,
+        RequireElements = {"streetsweeper_mag_extpro"},
     },
     {
         PrintName = "STICKER 2",
@@ -706,6 +724,14 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Streetsweeper_ready_part1", t = 0.3 },
             { s = "ARC9_BOCW.Streetsweeper_ready_part2", t = 0.6 },
             { s = "ARC9_BOCW.Streetsweeper_ready_part3", t = 0.9 },
+        },
+    },
+    ["ready_nostock"] = {
+        Source = "ready_mixstock",
+        EventTable = {
+            { s = "ARC9_BOCW.Streetsweeper_rotate", t = 0.3 },
+            { s = "ARC9_BOCW.Streetsweeper_rotate", t = 0.7 },
+            { s = "ARC9_BOCW.Streetsweeper_reload_end", t = 1.1 },
         },
     },
     ["bash"] = {

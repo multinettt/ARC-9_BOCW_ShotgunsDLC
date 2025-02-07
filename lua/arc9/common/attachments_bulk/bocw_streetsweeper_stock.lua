@@ -21,8 +21,6 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.1
 
-ATT.ActivateElements = {"stockgone", "stockringgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_streetsweeper_stock_tactical")
 
 ATT = {}
@@ -43,8 +41,6 @@ ATT.Model = "models/weapons/arc9/atts/bocw_streetsweeper_stock_wire.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ActivateElements = {"stockgone", "stockringgone"}
 
 ATT.SprintToFireTimeMult = 0.9
 
@@ -71,8 +67,6 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMult = 1.05
 
-ATT.ActivateElements = {"stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_streetsweeper_stock_duster")
 
 ATT = {}
@@ -91,8 +85,6 @@ ATT.Category = "bocw_streetsweeper_stock"
 ATT.SprintToFireTimeMult = 0.6
 
 ATT.SpreadMultHipFire = 1.15
-
-ATT.ActivateElements = {"stockgone", "stockringgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_streetsweeper_stock_nostock")
 
@@ -120,8 +112,6 @@ ATT.SpeedMultSighted = 1.2
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone", "stockringgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_streetsweeper_stock_sascombat")
 
 ATT = {}
@@ -144,8 +134,6 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MultAimDownSightsTime = 0.9
-
-ATT.ActivateElements = {"stockgone"}
 
 ATT.SpeedMultSprint = 1.04
 ATT.SpeedMultShooting = 1.1

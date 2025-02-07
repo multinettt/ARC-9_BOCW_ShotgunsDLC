@@ -704,8 +704,8 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         EventTable = {
-            { s = "ARC9_BOCW.410Ironhide_ready_part1", t = 0 },
-            { s = "ARC9_BOCW.410Ironhide_ready_part2", t = 0.5 },
+            { s = "ARC9_BOCW.410Ironhide_ready_part1", t = 0.1 },
+            { s = "ARC9_BOCW.410Ironhide_ready_part2", t = 0.4 },
         },
     },
     ["cycle"] = {
