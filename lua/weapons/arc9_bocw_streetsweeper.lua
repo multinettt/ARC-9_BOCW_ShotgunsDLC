@@ -301,8 +301,8 @@ SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_shotgun.wav"
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
 
-SWEP.EnterSightsSound = ""
-SWEP.ExitSightsSound = ""
+SWEP.EnterSightsSound = "ARC9_BOCW.Shared_ADS_In"
+SWEP.ExitSightsSound = "ARC9_BOCW.Shared_ADS_Out"
 
 SWEP.EnterBipodSound = "arc9/bipod_down.wav"
 SWEP.ExitBipodSound = "arc9/bipod_up.wav"
@@ -312,9 +312,9 @@ SWEP.ExitUBGLSound = ""
 
 SWEP.MalfunctionSound = ""
 
-SWEP.MeleeHitSound = "arc9/melee_hitbody.wav"
-SWEP.MeleeHitWallSound = "arc9/melee_hitworld.wav"
-SWEP.MeleeSwingSound = "arc9/melee_miss.wav"
+SWEP.MeleeHitSound = "ARC9_BOCW.Shared_Rifle_Melee_Hit"
+SWEP.MeleeHitWallSound = "arc9/melee_hitworld.ogg"
+SWEP.MeleeSwingSound = "ARC9_BOCW.Shared_Rifle_Melee_Swing"
 
 SWEP.BreathInSound = "arc9/breath_inhale.wav"
 SWEP.BreathOutSound = "arc9/breath_exhale.wav"
