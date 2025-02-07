@@ -28,15 +28,25 @@
     "$envmap" "\specularity_00"
     "$envmaptint" "[0.133 0.129 0.145]"                 
 
+    "$detail" ""
+    "$detailblendfactor" "0.5"
+    "$detailblendmode" "2"
+
     //remove this if not using MWB
     "Proxies"
     {
         "Arc9EnvMapTint"
         {
             "min" "0"
-            "max" "0.3"
+            "max" "0.4"
             "envmap" "\specularity_00"
             "color" "[0.133 0.129 0.145]"
+        }
+        "CustomCamo" 
+        {
+            camoTexture $detail
+            camoScale $detailscale
+            blend $detailblendfactor
         }
     }
 }

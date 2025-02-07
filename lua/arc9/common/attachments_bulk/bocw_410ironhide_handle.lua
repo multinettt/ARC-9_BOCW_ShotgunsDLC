@@ -42,7 +42,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 1.067
+ATT.ReloadTimeMult = 0.9
 ATT.RPMMult = 1.1
 
 ARC9.LoadAttachment(ATT, "bocw_410ironhide_handle_dropshot")
@@ -137,7 +137,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 1.03
+ATT.ReloadTimeMult = 0.8
 ATT.AimDownSightsTimeMult = 0.7
 
 ATT.SprintToFireTimeMult = 1.15

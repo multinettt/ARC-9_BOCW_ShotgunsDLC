@@ -486,50 +486,55 @@ SWEP.AttachmentElements = {
             {6, 1},
         }
     },
-    ["bodymount_flashlight"] = {
+    ["bodymount_lasermixbody"] = {
         Bodygroups = {
             {7, 1},
+        }
+    },
+    ["bodymount_flashlight"] = {
+        Bodygroups = {
+            {8, 1},
         }
     },
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2, 0, 0),
+                Pos = Vector(0.83, 0, 0),
             },
         },
     },
     ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-2, 0, 0),
+                Pos = Vector(-0.75, 0, 0),
             },
         },
     },
     ["barrel_reinforced"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0, 0, 0),
+                Pos = Vector(1.5, 0, 0),
             },
         },
     },
     ["barrel_ranger"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4, 0, 0),
+                Pos = Vector(1.5, 0, 0),
             }
         },
     },
     ["barrel_hammerforged"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-4, 0, 0),
+                Pos = Vector(-1.52, 0, 0),
             }
         },
     },
     ["barrel_taskforce"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(5.6, 0, 0),
+                Pos = Vector(3, 0, 0),
             }
         },
     },
@@ -566,7 +571,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_shotgun_muzzle", "bocw_shotgun_muzzle_suppressor"},
+        Category = {"bocw_410ironhide_muzzle"},
     },
     {
         PrintName = "BARREL",
@@ -580,19 +585,19 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_barrel",
-        Pos = Vector(10, 0, -2),
+        Pos = Vector(10, 0, -2.34),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_xm4_body"},
-        InstalledElements = {"bodyattached"},
+        InstalledElements = {"bodymount_lasermixbody"},
     },
     {
         Hidden = true,
         Bone = "tag_barrel",
-        Pos = Vector(12, 1.65, 0),
+        Pos = Vector(10, 0, -2.68),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_xm4_body_flash"},
-        InstalledElements = {"bodymount_flashlight", "bodyattached"},
+        InstalledElements = {"bodymount_flashlight"},
         MergeSlots = {4,5}
     },
     {
