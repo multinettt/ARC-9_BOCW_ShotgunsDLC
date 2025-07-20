@@ -538,18 +538,18 @@ ARC9.LoadAttachment(ATT, "bocw_streetsweeper_stock_marathon")
 ATT = {}
 
 ATT.PrintName = "Iron Sights" --// 6
-ATT.CompactName = "IRON SIGHT"
-ATT.Icon = Material("entities/bocw_atts/stocks/streetsweeper_nostock.png", "mips smooth")
-ATT.Description = [[Original iron sights of the Striker-12.]]
+ATT.CompactName = "IRON SIGHTS"
+ATT.Icon = Material("entities/bocw_atts/optics/streetsweeper_ironsight.png", "mips smooth")
+ATT.Description = [[Original iron sights of the Streetsweeper.]]
 
-ATT.SortOrder = -100
+ATT.SortOrder = -1
 
 ATT.Category = "bocw_streetsweeper_optic"
 
-ATT.ActivateElements = {"railgone"}
+ATT.ActivateElements = {"ironsights"}
 
 ATT.IronSights = {
-    Pos = Vector(0, -1, 1.3),
+    Pos = Vector(0, -1, 0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.4,
     Blur = true,
@@ -557,7 +557,7 @@ ATT.IronSights = {
     CrosshairInSights = false,
 }
 
-ARC9.LoadAttachment(ATT, "bocw_streetsweeper_norail")
+ARC9.LoadAttachment(ATT, "bocw_streetsweeper_ironsights")
 --========== .410 Ironhide ====================================================
 --========== BARREL ===================
 ATT = {}

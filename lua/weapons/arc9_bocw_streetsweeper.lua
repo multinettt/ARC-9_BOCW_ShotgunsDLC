@@ -7,7 +7,7 @@
 --   SWEP INFORMATION:
 
 --   BASE  : ARC9
---   BUILD : v1.0
+--   BUILD : v2025.7
 --   SR.NO : 
 
 
@@ -65,7 +65,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00100001000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -390,7 +390,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(0, -1, 0),
+    Pos = Vector(0, -1, 1.3),
     Ang = Angle(0, 0, 0),
     Magnification = 1.4,
     Blur = true,
@@ -466,9 +466,9 @@ SWEP.AttachmentElements = {
             {1, 1}
         }
     },
-    ["ironsightsgone"] = {
+    ["optic_mount"] = {
         Bodygroups = {
-            {2, 1},
+            {7, 0},
         }
     },
     ["stockgone"] = {
@@ -487,10 +487,9 @@ SWEP.AttachmentElements = {
             {6, 1},
         }
     },
-    ["railgone"] = {
+    ["ironsights"] = {
         Bodygroups = {
-            {2, 1},
-            {7, 1}
+            {2, 0},
         }
     },
     ["barrel_extended"] = {
@@ -572,8 +571,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_streetsweeper_optic", "optic_picatinny"},
-        InstalledElements = {"ironsightsgone"},
-        Installed = "bocw_streetsweeper_norail"
+        InstalledElements = {"optic_mount"},
     },
     {
         PrintName = "MUZZLE",
@@ -677,10 +675,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-
-    if attached["railgone"] and attached["ironsightsgone"] then
-        vm:SetBodygroup(2, 1) -- remove unfolded stock when stock attached with optic
-    end
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
